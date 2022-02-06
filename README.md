@@ -3,7 +3,7 @@ This Ebook gives you basic knowledge about Linux .
 
 <h2> Intro to Shell </h2>
 
-1. What Is the Shell?
+> 1. What Is the Shell?
 
 The shell is a program that takes keyboard commands and passes them to the operating system to carry
 out. Almost all Linux distributions supply a shell program from the GNU Project called
