@@ -1,7 +1,7 @@
 # linux-ebook
 This Ebook gives you basic knowledge about Linux . 
 
-<h2> Intro to Shell <h2>
+<h2> Intro to Shell </h2>
 
 1. What Is the Shell?
 
