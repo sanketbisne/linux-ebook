@@ -14,6 +14,7 @@ bash is an enhanced replacement for sh, the original Unix shell program written 
 Steve Bourne.
 
 2. Terminal Emulators
+
 When using a graphical user interface (GUI), we need another program called a "terminal
 emulator" to interact with the shell.
 
@@ -21,8 +22,10 @@ KDE uses konsole and GNOME uses gnome-terminal, though it's
 likely called simply “terminal” on our menu.
 
 3. Launching Terminal
+
 If you are using ubuntu just type "ctrl + alt + t " it will open the new terminal.
 
 4. So Basically What is $ ?
+
 $ is a shell prompt and it will appear on the terminal
 
