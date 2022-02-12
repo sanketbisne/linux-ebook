@@ -41,7 +41,6 @@ cd /usr/bin/sample
 
 Relative Pathnames starts from working directory .
 Using . and ..
-
 cd ./bin/sample
 
 ![image](https://user-images.githubusercontent.com/38061560/153716695-a3353041-1ab3-468a-b036-66c0734f75e9.png)
