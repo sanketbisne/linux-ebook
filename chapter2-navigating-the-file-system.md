@@ -46,5 +46,14 @@ cd ./bin/sample
 
 ![image](https://user-images.githubusercontent.com/38061560/153716695-a3353041-1ab3-468a-b036-66c0734f75e9.png)
 
+.. is used to go back to the parent directory or one step behind 
+we are going back from sample to root one by one using `cd ..`
+![image](https://user-images.githubusercontent.com/38061560/153716944-af9b1496-6e08-478c-8ab9-9f459736350c.png)
 
+"cd -"  is used to go back to the previous working directory
 
+![image](https://user-images.githubusercontent.com/38061560/153717062-d27ffb31-2fec-4dfb-b5ba-fc5f38f97163.png)
+ as we can see we were previously on the directory /bin/usr and now we navigated to /var/www/html
+so when we enter command `cd -` we are navigated back to the /bin/usr ie the previous directory.
+
+![image](https://user-images.githubusercontent.com/38061560/153717104-11ca3653-5dae-4269-af36-6aa5af9dc904.png)
