@@ -11,7 +11,7 @@ to be displayed on the terminal we can use
 ![image](https://user-images.githubusercontent.com/38061560/153747237-849dfa45-ee58-4769-95f6-c79f521f9d91.png)
 
 - ls -a  ->  It list all files and also which starts from . (hidden files).
-
+- ls -l  -> display result in long list
 - ls -al ->  It displays results in long format.
 
 ![image](https://user-images.githubusercontent.com/38061560/153747227-1b99b4f8-9a92-479c-9604-41240a53003a.png)
