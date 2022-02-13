@@ -40,6 +40,8 @@ to be displayed on the terminal we can use
 
 what does first column `-rw-r--r--` means ?
 
+**-rw-r--r-- 1 root root    8 Feb 13 10:56 file1**
+
 ![image](https://user-images.githubusercontent.com/38061560/153750180-15148345-9baf-4abb-b143-cd0a84d6c786.png)
 
 The first character tells the
