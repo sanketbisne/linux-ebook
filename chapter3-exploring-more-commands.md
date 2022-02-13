@@ -36,3 +36,22 @@ to be displayed on the terminal we can use
 
 ![image](https://user-images.githubusercontent.com/38061560/153747348-a7695a17-666c-4a27-97e6-faaf1ac1fcec.png)
 
+<h3> About File Permission user , owner and groups </h3>
+
+what does first column `-rw-r--r--` means ?
+
+The first character tells the
+type of file. Among the different types, a leading dash(-)
+means a regular file, while a "d" indicates a directory.
+Lets split down this into 3 units.
+
+`-` means that it is file
+`d` means that it is a directory
+
+`rw-` means that there is read and write permission granted on Owner level
+`r--` means that there is only read permission granted on group 
+`r--` means that there is onlt read permission granted for everyone else ie. others
+
+`root` - The username  of the file's owner
+`root` - The name of the group that owns the file.
+`
