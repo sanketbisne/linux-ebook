@@ -1,9 +1,10 @@
 <h2> Exploring more Commands with their flags </h2>
 
 - ls
+
 As we saw earlier ls command is used to list down files/Folder in Directories
- if we want some hidden files ie which start with . in linux
- to be displayed on the terminal we can use 
+if we want some hidden files ie which start with . in linux
+to be displayed on the terminal we can use 
 
 - ls -a  ->  It list all files and also which starts from . (hidden files).
 
