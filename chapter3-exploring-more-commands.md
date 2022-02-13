@@ -35,7 +35,7 @@ to be displayed on the terminal we can use
 - ls -ltrh -> print the output in long listed , sorted by modification time  and human readable format.
 
 ![image](https://user-images.githubusercontent.com/38061560/153747348-a7695a17-666c-4a27-97e6-faaf1ac1fcec.png)
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h3> About File Permission user , owner and groups </h3>
 
 what does first column `-rw-r--r--` means ?
