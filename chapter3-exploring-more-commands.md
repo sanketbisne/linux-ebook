@@ -40,6 +40,8 @@ to be displayed on the terminal we can use
 
 what does first column `-rw-r--r--` means ?
 
+![image](https://user-images.githubusercontent.com/38061560/153750180-15148345-9baf-4abb-b143-cd0a84d6c786.png)
+
 The first character tells the
 type of file. Among the different types, a leading dash(-)
 means a regular file, while a "d" indicates a directory.
@@ -50,8 +52,11 @@ Lets split down this into 3 units.
 
 `rw-` means that there is read and write permission granted on Owner level
 `r--` means that there is only read permission granted on group 
-`r--` means that there is onlt read permission granted for everyone else ie. others
+`r--` means that there is only read permission granted for everyone else ie. others
 
 `root` - The username  of the file's owner
 `root` - The name of the group that owns the file.
-`
+`8` - Size of files in bytes
+`13 Feb 10:56 ` - The Date and Time of the Files Last modified.
+
+**drwxr-xr-x 3 root root 4096 Feb 13 09:25 folder1/**  - d indicated that it is a directory and followed by u,g,o respecively.
