@@ -7,6 +7,7 @@ if we want some hidden files ie which start with . in linux
 to be displayed on the terminal we can use 
 
  Normal ls 
+
 ![image](https://user-images.githubusercontent.com/38061560/153747237-849dfa45-ee58-4769-95f6-c79f521f9d91.png)
 
 - ls -a  ->  It list all files and also which starts from . (hidden files).
