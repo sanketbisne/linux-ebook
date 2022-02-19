@@ -90,4 +90,49 @@ initrd /boot/initrd.img-4.19.0-17-amd64
 
 ![image](https://user-images.githubusercontent.com/38061560/154796340-cd72e26b-f47d-4bba-a354-94a7f02fc8fc.png)
 
+4. / dev 
 
+Here the information about devices are being stored.
+
+This is a special directory that contains device nodes.
+
+The Kernel mantains a list of all the devices it understands.
+
+The devices such that boot disks and non-boot disk are located here
+as in below screenshot we can see the sda and its partision , sdb information is stored
+
+```
+
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda       8:0    0   10G  0 disk 
+├─sda1    8:1    0  9.9G  0 part /
+├─sda14   8:14   0    3M  0 part 
+└─sda15   8:15   0  124M  0 part /boot/efi
+sdb       8:16   0   17G  0 disk
+
+
+root@sanket-spot-vm:/dev# ls
+autofs           hugepages           null    shm       tty14  tty27  tty4   tty52  tty8     vcsa   vfio
+block            hwrng               psaux   snapshot  tty15  tty28  tty40  tty53  tty9     vcsa1  vga_arbiter
+bsg              initctl             ptmx    stderr    tty16  tty29  tty41  tty54  ttyS0    vcsa2  vhost-net
+btrfs-control    input               pts     stdin     tty17  tty3   tty42  tty55  ttyS1    vcsa3  vhost-vsock
+char             kmsg                random  stdout    tty18  tty30  tty43  tty56  ttyS2    vcsa4  zero
+console          log                 rtc     tpm0      tty19  tty31  tty44  tty57  ttyS3    vcsa5
+core             loop-control        rtc0    tpmrm0    tty2   tty32  tty45  tty58  urandom  vcsa6
+cpu_dma_latency  mapper              sda     tty       tty20  tty33  tty46  tty59  vcs      vcsu
+cuse             mem                 sda1    tty0      tty21  tty34  tty47  tty6   vcs1     vcsu1
+disk             memory_bandwidth    sda14   tty1      tty22  tty35  tty48  tty60  vcs2     vcsu2
+fd               mqueue              sda15   tty10     tty23  tty36  tty49  tty61  vcs3     vcsu3
+full             net                 sdb     tty11     tty24  tty37  tty5   tty62  vcs4     vcsu4
+fuse             network_latency     sg0     tty12     tty25  tty38  tty50  tty63  vcs5     vcsu5
+hpet             network_throughput  sg1     tty13     tty26  tty39  tty51  tty7   vcs6     vcsu6
+
+```
+
+
+
+It's a character device based file Within Linux devices such as hardware are characterised in two ways:
+
+Character Devices (c) which are devices which transfer data in characters also known as bytes or bits such as mice, speaker etc.
+
+Block Devices (b) which are devices which transfer data in blocks of data such as USB, Hard Disks etc.
