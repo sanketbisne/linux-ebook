@@ -53,12 +53,19 @@ Lets split down this into 3 units.
 `d` means that it is a directory
 
 `rw-` means that there is read and write permission granted on Owner level
+
 `r--` means that there is only read permission granted on group 
+
 `r--` means that there is only read permission granted for everyone else ie. others
+
 `1`   means number of hard links, we will see more about hard links later.
-`root` - The username  of the file's owner
+
+`root` - The username  of the file's owner.
+
 `root` - The name of the group that owns the file.
+
 `8` - Size of files in bytes
+
 `13 Feb 10:56 ` - The Date and Time of the Files Last modified.
 
 **drwxr-xr-x 3 root root 4096 Feb 13 09:25 folder1/**  - d indicated that it is a directory and followed by u,g,o respecively.
