@@ -63,5 +63,27 @@ also commands like cal,chmod,clear,curl, etc are present here in binary.
 ![image](https://user-images.githubusercontent.com/38061560/154794539-78c60fd4-8495-4109-be66-2a4d5fbcdbb5.png)
 
 3. /boot - 
+ It contains the Linux Kernel[vmlinuz-4.19.0-18-cloud-amd64 ] 
+ 
+ initial RAM disk image [ initrd.img-4.19.0-18-cloud-amd64]
+ 
+ and Boot Loader.
+
+some files - /boot/grub/grub.conf or menu.1st which are used to configure the boot loader.
+
+/boot/vmlinuz  ( or similar) the linux kernel file.
+
+![image](https://user-images.githubusercontent.com/38061560/154795350-e60e2986-54b6-4189-aa49-2275250b3085.png)
+
+inside grub.cfg file , there is instruction to load kernel image and ram when booting up system.
+![image](https://user-images.githubusercontent.com/38061560/154796045-8dc8990f-404e-4ebe-b0cc-e874de3911bd.png)
+
+as you can see it calls the image to be loaded .
+
+linux /boot/vmlinuz-4.19.0-17-amd64 {
+      initrd /boot/initrd.img-4.19.0-17-amd64
+   }
+
+![image](https://user-images.githubusercontent.com/38061560/154796340-cd72e26b-f47d-4bba-a354-94a7f02fc8fc.png)
 
 
