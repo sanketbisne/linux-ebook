@@ -165,5 +165,105 @@ it gives size of terminal [ length X Breath ]
 
 ![image](https://user-images.githubusercontent.com/38061560/154807983-0b354461-7979-45cc-bbba-87bedae6a948.png)
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. /etc 
+This Directory Contains all of the system-wide Configuration Files.
 
+It also contains a collection of shell scripts that start each of the system services at boot time.
+
+Everything in this directory should be readable text.
+
+some Interesting Files:
+- /etc/fstab   : It contains the details about storage devices and thier associated mount points.
+
+```
+UUID=6e8u8db3-b63e-4603-9fd7-fb7ada8908cd / ext4 rw,discard,errors=remount-ro,x-systemd.growfs 0 1  --for Boot disk
+/dev/sdb /data ext4 defaults 0 1  --for non boot disk
+
+
+```
+- /etc/passwd  : It contains a list of the user accounts. The syntax is as follows
+``` 
+sanket_bisne:x:1001:1002:sanket_bisne,1,1,1,1:/home/sanket_bisne:/bin/bash
+```
+- /etc/crontab : It contains a file that defines when automated jobs will be Run.
+```
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+
+```
+- /etc/sudoers : 
+
+Within your Linux or macOS system, there’s a file called “sudoers” which controls the deepest levels of your permissions system. It permits or denies users from gaining super-user access and holds some special preferences for sudo.
+
+- What is the sudoers file?
+The sudoers file is a text file that lives at "/etc/sudoers." It controls how sudo works on your machine. 
+This permits your users to execute commands that would be otherwise prohibited.
+
+If you need to grant it superuser permission, you will need to edit the sudoers file and add this user account to it.
+
+
+ 
+How can I edit sudoers?
+Never edit the sudoers file in a normal text editor. This can lead to simultaneous editing and corrupted files, potentially denying any admin access. Sudoers must be edited by running visudo in Terminal, like so:
+
+sudo visudo
+edit-sudoers-file-change-sudo-timeout-visudo-command
+Note that you need to use sudo to run visudo. This will open the sudoers file in the default text editor in Terminal (by default, nano).
+
+edit-sudoers-file-change-sudo-timeout-sudoer-file-in-vim
+
+ 
+What can changing the sudoers file do?
+The sudoers file’s main job is defining which users can use sudo for what. It also holds some simple preferences, which we can adjust first to get a feel for how visudo works.
+
+Change the sudo timeout
+By default, entering your sudo password elevates your permissions until you close the shell or exit. This can be insecure, and some might prefer entering their password each time they use sudo.
+
+1. Run sudo visudo as mentioned above.
+
+2. Press Alt + / to navigate to the end of the document. If you are using Vi or Vim, press Shift + G instead.
+
+edit-sudoers-file-change-sudo-timeout-jump-to-end
+3. Create a new line at the bottom of the document and add the following line:
+
+Defaults timestamp_timeout=0
+edit-sudoers-file-change-sudo-timeout-add-default-timeout
+This will set your sudo timeout to zero seconds, so you’ll have sudo permissions for zero seconds after you execute the first command. If you prefer a different interval, enter that value in seconds instead.
+
+You can also set the timeout to “-1,” which gives you an infinite grace period. Don’t do that. It’s a handy way to accidentally nuke your system one day.
+
+4. Press Ctrl + o to save and Ctrl + x to exit.
+
+Limit who can use sudo and for what
+The main purpose of the sudoers file is to control which users can run sudo. Without sudo, users can’t elevate their permissions. If you have multiple users accessing the same system through shells, you can control their access by setting values in sudo.
+
+Every sudoers file will have the following line:
+
+`root ALL=(ALL) ALL`
+This permits the root user on ALL hosts using ALL users to execute ALL commands. ALL is a special value in the sudoers file meaning "no restrictions."
+
+To Add new user to your sudoers file then follow the steps:
+- `adduser sanket_bisne` 
+- nano /etc/sudoers
+- sanket_bisne ALL=(ALL) ALL
+- ctrl o , ctrl x
+- sudo su - sanket_bisne
+- enter password
+- run apt update and now you have all privileges.
+Now you h
 
