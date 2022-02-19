@@ -236,4 +236,8 @@ To Add new user to your sudoers file then follow the steps:
 - enter password
 - run apt update and now you have all privileges.
 
+and other files like os-release etc are present in the etc directory.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
