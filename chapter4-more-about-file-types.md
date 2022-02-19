@@ -44,4 +44,24 @@ Whereas the
 more program could only page forward, the less program allows paging both
 forward and backward and has many other features as well.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+<h3> About Directories Found on Linux Systems. </h3>
+
+Lets Start with Root ( / ) - Everything in Linux Start from Root.
+
+1. cd / - we enter in root where all directories are been placed.
+
+![image](https://user-images.githubusercontent.com/38061560/154792519-ce6fc9b1-4043-41ab-a64d-a41b18479722.png)
+
+2. /bin - contains the binaries that must be present for the system to boot and run 
+
+like we install package by `apt install apache1` , so here apt , apt-cache package manager  files are present which helps us to update and run the services smoothly.
+
+also commands like cal,chmod,clear,curl, etc are present here in binary.
+
+
+![image](https://user-images.githubusercontent.com/38061560/154794539-78c60fd4-8495-4109-be66-2a4d5fbcdbb5.png)
+
+3. /boot - 
+
 
