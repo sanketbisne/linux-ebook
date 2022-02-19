@@ -136,3 +136,34 @@ It's a character device based file Within Linux devices such as hardware are cha
 Character Devices (c) which are devices which transfer data in characters also known as bytes or bits such as mice, speaker etc.
 
 Block Devices (b) which are devices which transfer data in blocks of data such as USB, Hard Disks etc.
+
+
+![image](https://user-images.githubusercontent.com/38061560/154807795-2e66a94c-43f3-44b9-b865-4e43142f9968.png)
+
+- what is tty?
+
+The tty command of terminal basically prints the file name of the terminal connected to standard input. tty is short of teletype, but popularly known as a terminal it allows you to interact with the system by passing on the data (you input) to the system, and displaying the output produced by the system.
+
+![image](https://user-images.githubusercontent.com/38061560/154807841-0dcca983-07b5-462e-b054-592f18dfb828.png)
+
+it shows /dev/pts/0
+
+if you open another session then the output will be changed .
+
+![image](https://user-images.githubusercontent.com/38061560/154808150-6e2086e9-f56b-4a42-96c7-82314273d9be.png)
+
+
+as you can see  /dev/pts/0  and /dev/pts/1 . this are the terminal attached to our process -> ps -a 
+ 
+- what is stty?
+
+stty command in Linux is used to change and print terminal line settings
+
+`stty size`
+
+it gives size of terminal 
+
+![image](https://user-images.githubusercontent.com/38061560/154807983-0b354461-7979-45cc-bbba-87bedae6a948.png)
+
+
+
