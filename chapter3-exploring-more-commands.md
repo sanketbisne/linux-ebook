@@ -35,10 +35,14 @@ to be displayed on the terminal we can use
 - ls -ltrh -> print the output in long listed , sorted by modification time  and human readable format.
 
 ![image](https://user-images.githubusercontent.com/38061560/153747348-a7695a17-666c-4a27-97e6-faaf1ac1fcec.png)
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h3> About File Permission user , owner and groups </h3>
 
 what does first column `-rw-r--r--` means ?
+
+**-rw-r--r-- 1 root root    8 Feb 13 10:56 file1**
+
+![image](https://user-images.githubusercontent.com/38061560/153750180-15148345-9baf-4abb-b143-cd0a84d6c786.png)
 
 The first character tells the
 type of file. Among the different types, a leading dash(-)
@@ -49,9 +53,14 @@ Lets split down this into 3 units.
 `d` means that it is a directory
 
 `rw-` means that there is read and write permission granted on Owner level
-`r--` means that there is only read permission granted on group 
-`r--` means that there is onlt read permission granted for everyone else ie. others
 
-`root` - The username  of the file's owner
+`r--` means that there is only read permission granted on group 
+
+`r--` means that there is only read permission granted for everyone else ie. others
+
+`1`   means number of hard links, we will see more about hard links later.
+
+`root` - The username  of the file's owner.
+
 `root` - The name of the group that owns the file.
 
