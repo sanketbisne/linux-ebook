@@ -55,7 +55,7 @@ Lets split down this into 3 units.
 `rw-` means that there is read and write permission granted on Owner level
 `r--` means that there is only read permission granted on group 
 `r--` means that there is only read permission granted for everyone else ie. others
-
+`1`   means number of hard links, we will see more about hard links later.
 `root` - The username  of the file's owner
 `root` - The name of the group that owns the file.
 `8` - Size of files in bytes
