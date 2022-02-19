@@ -231,15 +231,15 @@ Every sudoers file will have the following line:
 This permits the root user on ALL hosts using ALL users to execute ALL commands. ALL is a special value in the sudoers file meaning "no restrictions."
 
 To Add new user to your sudoers file then follow the steps:
-
-- `adduser sanket_bisne` 
+```
+- adduser sanket_bisne
 - nano /etc/sudoers
 - sanket_bisne ALL=(ALL) ALL
 - ctrl o , ctrl x
 - sudo su - sanket_bisne
 - enter password
 - run apt update and now you have all privileges.
-
+```
 and other files like os-release etc are present in the etc directory.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
