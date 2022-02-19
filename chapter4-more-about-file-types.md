@@ -161,7 +161,7 @@ stty command in Linux is used to change and print terminal line settings
 
 `stty size`
 
-it gives size of terminal 
+it gives size of terminal [ length X Breath ]
 
 ![image](https://user-images.githubusercontent.com/38061560/154807983-0b354461-7979-45cc-bbba-87bedae6a948.png)
 
