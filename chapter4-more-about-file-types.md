@@ -235,5 +235,5 @@ To Add new user to your sudoers file then follow the steps:
 - sudo su - sanket_bisne
 - enter password
 - run apt update and now you have all privileges.
-Now you h
+
 
