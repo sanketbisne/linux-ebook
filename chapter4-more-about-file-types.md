@@ -169,7 +169,11 @@ it gives size of terminal [ length X Breath ]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 5. /etc 
 
-This Directory Contains all of the system-wide Configuration Files.
+This Directory Contains all of the system-wide Configuration Files./
+
+
+![image](https://user-images.githubusercontent.com/38061560/154815791-f4270a93-f2d3-4585-812e-48aece3e358c.png)
+
 
 It also contains a collection of shell scripts that start each of the system services at boot time.
 
