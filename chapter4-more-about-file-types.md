@@ -63,6 +63,7 @@ also commands like cal,chmod,clear,curl, etc are present here in binary.
 ![image](https://user-images.githubusercontent.com/38061560/154794539-78c60fd4-8495-4109-be66-2a4d5fbcdbb5.png)
 
 3. /boot - 
+
  It contains the Linux Kernel[vmlinuz-4.19.0-18-cloud-amd64 ] 
  
  initial RAM disk image [ initrd.img-4.19.0-18-cloud-amd64]
@@ -167,6 +168,7 @@ it gives size of terminal [ length X Breath ]
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 5. /etc 
+
 This Directory Contains all of the system-wide Configuration Files.
 
 It also contains a collection of shell scripts that start each of the system services at boot time.
@@ -174,6 +176,7 @@ It also contains a collection of shell scripts that start each of the system ser
 Everything in this directory should be readable text.
 
 some Interesting Files:
+
 - /etc/fstab   : It contains the details about storage devices and thier associated mount points.
 
 ```
@@ -216,40 +219,6 @@ This permits your users to execute commands that would be otherwise prohibited.
 
 If you need to grant it superuser permission, you will need to edit the sudoers file and add this user account to it.
 
-
- 
-How can I edit sudoers?
-Never edit the sudoers file in a normal text editor. This can lead to simultaneous editing and corrupted files, potentially denying any admin access. Sudoers must be edited by running visudo in Terminal, like so:
-
-sudo visudo
-edit-sudoers-file-change-sudo-timeout-visudo-command
-Note that you need to use sudo to run visudo. This will open the sudoers file in the default text editor in Terminal (by default, nano).
-
-edit-sudoers-file-change-sudo-timeout-sudoer-file-in-vim
-
- 
-What can changing the sudoers file do?
-The sudoers file’s main job is defining which users can use sudo for what. It also holds some simple preferences, which we can adjust first to get a feel for how visudo works.
-
-Change the sudo timeout
-By default, entering your sudo password elevates your permissions until you close the shell or exit. This can be insecure, and some might prefer entering their password each time they use sudo.
-
-1. Run sudo visudo as mentioned above.
-
-2. Press Alt + / to navigate to the end of the document. If you are using Vi or Vim, press Shift + G instead.
-
-edit-sudoers-file-change-sudo-timeout-jump-to-end
-3. Create a new line at the bottom of the document and add the following line:
-
-Defaults timestamp_timeout=0
-edit-sudoers-file-change-sudo-timeout-add-default-timeout
-This will set your sudo timeout to zero seconds, so you’ll have sudo permissions for zero seconds after you execute the first command. If you prefer a different interval, enter that value in seconds instead.
-
-You can also set the timeout to “-1,” which gives you an infinite grace period. Don’t do that. It’s a handy way to accidentally nuke your system one day.
-
-4. Press Ctrl + o to save and Ctrl + x to exit.
-
-Limit who can use sudo and for what
 The main purpose of the sudoers file is to control which users can run sudo. Without sudo, users can’t elevate their permissions. If you have multiple users accessing the same system through shells, you can control their access by setting values in sudo.
 
 Every sudoers file will have the following line:
@@ -258,6 +227,7 @@ Every sudoers file will have the following line:
 This permits the root user on ALL hosts using ALL users to execute ALL commands. ALL is a special value in the sudoers file meaning "no restrictions."
 
 To Add new user to your sudoers file then follow the steps:
+
 - `adduser sanket_bisne` 
 - nano /etc/sudoers
 - sanket_bisne ALL=(ALL) ALL
