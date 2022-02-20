@@ -63,6 +63,7 @@ also commands like cal,chmod,clear,curl, etc are present here in binary.
 ![image](https://user-images.githubusercontent.com/38061560/154794539-78c60fd4-8495-4109-be66-2a4d5fbcdbb5.png)
 
 3. /boot - 
+
  It contains the Linux Kernel[vmlinuz-4.19.0-18-cloud-amd64 ] 
  
  initial RAM disk image [ initrd.img-4.19.0-18-cloud-amd64]
@@ -165,6 +166,83 @@ it gives size of terminal [ length X Breath ]
 
 ![image](https://user-images.githubusercontent.com/38061560/154807983-0b354461-7979-45cc-bbba-87bedae6a948.png)
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. /etc 
+
+This Directory Contains all of the system-wide Configuration Files./
+
+
+![image](https://user-images.githubusercontent.com/38061560/154815791-f4270a93-f2d3-4585-812e-48aece3e358c.png)
+
+
+It also contains a collection of shell scripts that start each of the system services at boot time.
+
+Everything in this directory should be readable text.
+
+some Interesting Files:
+
+- /etc/fstab   : It contains the details about storage devices and thier associated mount points.
+
+```
+UUID=6e8u8db3-b63e-4603-9fd7-fb7ada8908cd / ext4 rw,discard,errors=remount-ro,x-systemd.growfs 0 1  --for Boot disk
+/dev/sdb /data ext4 defaults 0 1  --for non boot disk
+
+
+```
+- /etc/passwd  : It contains a list of the user accounts. The syntax is as follows
+``` 
+sanket_bisne:x:1001:1002:sanket_bisne,1,1,1,1:/home/sanket_bisne:/bin/bash
+```
+- /etc/crontab : It contains a file that defines when automated jobs will be Run.
+```
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+
+```
+- /etc/sudoers : 
+
+Within your Linux or macOS system, there’s a file called “sudoers” which controls the deepest levels of your permissions system. It permits or denies users from gaining super-user access and holds some special preferences for sudo.
+
+- What is the sudoers file?
+The sudoers file is a text file that lives at "/etc/sudoers." It controls how sudo works on your machine. 
+This permits your users to execute commands that would be otherwise prohibited.
+
+If you need to grant it superuser permission, you will need to edit the sudoers file and add this user account to it.
+
+The main purpose of the sudoers file is to control which users can run sudo. Without sudo, users can’t elevate their permissions. If you have multiple users accessing the same system through shells, you can control their access by setting values in sudo.
+
+Every sudoers file will have the following line:
+
+`root ALL=(ALL) ALL`
+This permits the root user on ALL hosts using ALL users to execute ALL commands. ALL is a special value in the sudoers file meaning "no restrictions."
+
+To Add new user to your sudoers file then follow the steps:
+```
+- adduser sanket_bisne
+- nano /etc/sudoers
+- sanket_bisne ALL=(ALL) ALL
+- ctrl o , ctrl x
+- sudo su - sanket_bisne
+- enter password
+- run apt update and now you have all privileges.
+```
+and other files like os-release etc are present in the etc directory.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 5. /home
