@@ -167,3 +167,4 @@ it gives size of terminal [ length X Breath ]
 
 
 
+5. /home
