@@ -278,3 +278,9 @@ To add user john to existing group "sanket"
 
 ![image](https://user-images.githubusercontent.com/38061560/155837106-1f4cc8a5-2675-4456-b66c-c8f124a6a02c.png)
 
+7. /lib
+
+Contains shared library files used by the core system programs. These are similar to dynamic link libraries (DLLs) in Windows.
+
+![image](https://user-images.githubusercontent.com/38061560/155837362-3aec7a14-f136-4b24-bbba-610b00c9d766.png)
+
