@@ -271,4 +271,10 @@ As we can see sanket groupid is 1002 and this group is present is shyam user
 ![image](https://user-images.githubusercontent.com/38061560/155836802-f3f9d4e4-411f-480c-9804-57f146b5d844.png)
 
 --------------------------------------------------------------------------------------------------------
+To add user john to existing group "sanket"
+
+- usermod -a -G sanket john
+- id john
+
+![image](https://user-images.githubusercontent.com/38061560/155837106-1f4cc8a5-2675-4456-b66c-c8f124a6a02c.png)
 
