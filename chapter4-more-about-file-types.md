@@ -284,3 +284,11 @@ Contains shared library files used by the core system programs. These are simila
 
 ![image](https://user-images.githubusercontent.com/38061560/155837362-3aec7a14-f136-4b24-bbba-610b00c9d766.png)
 
+8. /lost+found 
+Each formatted partition or device using a Linux file system, such as ext4, will have this directory. It is used in the case of a partial recovery from a file system corruption event.
+
+Unless something really bad has happened to our system,
+this directory will remain empty.
+
+9. /media  - On modern Linux systems the /media directory will contain the mount points for removable media such as USB Drives, CD-ROMs, etc. that are mounted automatically at insertion.
+
