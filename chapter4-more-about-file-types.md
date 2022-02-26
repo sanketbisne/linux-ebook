@@ -261,8 +261,12 @@ we can see from `id sanket` that which users are  part of the group "Sanket"
 
 Let's add shyam to group 'sanket'
 
-- `adduser shyam sanket` From below ss we can see that shyam is a part of sanket group
+- `adduser shyam sanket`
+ From below ss we can see that shyam is a part of sanket group
+
 ![image](https://user-images.githubusercontent.com/38061560/155836786-65e6b5ed-3dad-4680-bc54-6b47300d8dcb.png)
+
+As we can see sanket groupid is 1002 and this group is present is shyam user
 
 ![image](https://user-images.githubusercontent.com/38061560/155836802-f3f9d4e4-411f-480c-9804-57f146b5d844.png)
 
