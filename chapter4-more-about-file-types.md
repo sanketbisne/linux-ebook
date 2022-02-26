@@ -6,11 +6,11 @@ For example if a file extension is jpeg or mp3 and if we want to know the file t
 
 lets download an image from web by 
 
-`wget "https://cdn.quotesgram.com/img/64/68/871911642-Peace-Facebook-Covers-2063.jpeg"`
+- `wget "https://cdn.quotesgram.com/img/64/68/871911642-Peace-Facebook-Covers-2063.jpeg"`
 
-`ls`
+- `ls`
 
-`file 871911642-Peace-Facebook-Covers-2063.jpeg`
+- `file 871911642-Peace-Facebook-Covers-2063.jpeg`
 
 In output it will show the file is of type jpeg.
 
