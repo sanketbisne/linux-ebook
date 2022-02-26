@@ -242,6 +242,29 @@ To Add new user to your sudoers file then follow the steps:
 ```
 and other files like os-release etc are present in the etc directory.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+6. /home
+
+Here in home, every user is given a directory in /home. 
+
+Ordinary users can only write files in their home directories. This limitation protects the system from errant user activity.
+
+We can use `adduser <username> ` to create user and ` deluser` todelete a particular user from home directory.
+
+![image](https://user-images.githubusercontent.com/38061560/155836597-69a4e77e-45b3-4e36-8477-6464010f6504.png)
+
+we can see from `id sanket` that which users are  part of the group "Sanket"
+
+- sanket is part of sudoers group.
+- nisha is part of sankets group
+
+Let's add shyam to group 'sanket'
+
+- `adduser shyam sanket` From below ss we can see that shyam is a part of sanket group
+![image](https://user-images.githubusercontent.com/38061560/155836786-65e6b5ed-3dad-4680-bc54-6b47300d8dcb.png)
+
+![image](https://user-images.githubusercontent.com/38061560/155836802-f3f9d4e4-411f-480c-9804-57f146b5d844.png)
+
+--------------------------------------------------------------------------------------------------------
 
