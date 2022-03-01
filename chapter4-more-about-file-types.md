@@ -292,5 +292,4 @@ this directory will remain empty.
 
 9. /media  - On modern Linux systems the /media directory will contain the mount points for removable media such as USB Drives, CD-ROMs, etc. that are mounted automatically at insertion.
 
-5. /home
 10. /mnt -  On older Linux systems, the /mnt directory contains mount points for removable devices that have been mounted manually.
