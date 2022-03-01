@@ -6,11 +6,11 @@ For example if a file extension is jpeg or mp3 and if we want to know the file t
 
 lets download an image from web by 
 
-`wget "https://cdn.quotesgram.com/img/64/68/871911642-Peace-Facebook-Covers-2063.jpeg"`
+- `wget "https://cdn.quotesgram.com/img/64/68/871911642-Peace-Facebook-Covers-2063.jpeg"`
 
-`ls`
+- `ls`
 
-`file 871911642-Peace-Facebook-Covers-2063.jpeg`
+- `file 871911642-Peace-Facebook-Covers-2063.jpeg`
 
 In output it will show the file is of type jpeg.
 
@@ -242,7 +242,55 @@ To Add new user to your sudoers file then follow the steps:
 ```
 and other files like os-release etc are present in the etc directory.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+6. /home
+
+Here in home, every user is given a directory in /home. 
+
+Ordinary users can only write files in their home directories. This limitation protects the system from errant user activity.
+
+We can use `adduser <username> ` to create user and ` deluser` todelete a particular user from home directory.
+
+![image](https://user-images.githubusercontent.com/38061560/155836597-69a4e77e-45b3-4e36-8477-6464010f6504.png)
+
+we can see from `id sanket` that which users are  part of the group "Sanket"
+
+- sanket is part of sudoers group.
+- nisha is part of sankets group
+
+Let's add shyam to group 'sanket'
+
+- `adduser shyam sanket`
+ From below ss we can see that shyam is a part of sanket group
+
+![image](https://user-images.githubusercontent.com/38061560/155836786-65e6b5ed-3dad-4680-bc54-6b47300d8dcb.png)
+
+As we can see sanket groupid is 1002 and this group is present is shyam user
+
+![image](https://user-images.githubusercontent.com/38061560/155836802-f3f9d4e4-411f-480c-9804-57f146b5d844.png)
+
+--------------------------------------------------------------------------------------------------------
+To add user john to existing group "sanket"
+
+- usermod -a -G sanket john
+- id john
+
+![image](https://user-images.githubusercontent.com/38061560/155837106-1f4cc8a5-2675-4456-b66c-c8f124a6a02c.png)
+
+7. /lib
+
+Contains shared library files used by the core system programs. These are similar to dynamic link libraries (DLLs) in Windows.
+
+![image](https://user-images.githubusercontent.com/38061560/155837362-3aec7a14-f136-4b24-bbba-610b00c9d766.png)
+
+8. /lost+found 
+Each formatted partition or device using a Linux file system, such as ext4, will have this directory. It is used in the case of a partial recovery from a file system corruption event.
+
+Unless something really bad has happened to our system,
+this directory will remain empty.
+
+9. /media  - On modern Linux systems the /media directory will contain the mount points for removable media such as USB Drives, CD-ROMs, etc. that are mounted automatically at insertion.
 
 5. /home
+10. /mnt -  On older Linux systems, the /mnt directory contains mount points for removable devices that have been mounted manually.
